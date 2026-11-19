@@ -1,0 +1,105 @@
+{
+    "name": "chatluna-plugin-sticker-helper",
+    "version": "0.1.0",
+    "description": "自动收集表情包、按人设内化并让模型发表情",
+    "author": "LingLambda",
+    "type": "module",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/LingLambda/chatluna-plugin-sticker-helper.git"
+    },
+    "homepage": "https://github.com/LingLambda/chatluna-plugin-sticker-helper#readme",
+    "bugs": {
+        "url": "https://github.com/LingLambda/chatluna-plugin-sticker-helper/issues"
+    },
+    "keywords": [
+        "chatluna",
+        "chatluna-plugin",
+        "sticker"
+    ],
+    "main": "lib/index.js",
+    "types": "lib/index.d.ts",
+    "exports": {
+        ".": {
+            "types": "./lib/index.d.ts",
+            "default": "./lib/index.js"
+        },
+        "./package.json": "./package.json",
+        "./client": {
+            "types": "./client/index.ts",
+            "default": "./client/index.ts"
+        }
+    },
+    "files": [
+        "lib",
+        "README.md",
+        "client",
+        "dist",
+        "LICENSE"
+    ],
+    "engines": {
+        "node": ">=24.0.0"
+    },
+    "scripts": {
+        "build": "yakumo build",
+        "clean": "yakumo clean"
+    },
+    "dependencies": {
+        "@cf-wasm/photon": "^0.4.0",
+        "@satorijs/core": "^4.6.1",
+        "fflate": "^0.8.2",
+        "image-size": "^2.0.2",
+        "omggif": "^1.0.10",
+        "schemastery": "3.18.0"
+    },
+    "peerDependencies": {
+        "@chatluna/schema": "^2.0.0-alpha.0",
+        "@chatluna/server": "^2.0.0-alpha.0",
+        "@chatluna/tool": "^2.0.0-alpha.0",
+        "@chatluna/transform": "^2.0.0-alpha.0",
+        "@chatluna/ui-server": "^2.0.0-alpha.0",
+        "@chatluna/utils": "^2.0.0-alpha.0",
+        "chatluna": "^2.0.0-alpha.0",
+        "cordis": "^4.0.0-rc.12"
+    },
+    "devDependencies": {
+        "@chatluna/agent": "2.0.0-alpha.0",
+        "@chatluna/ai-runtime": "2.0.0-alpha.0",
+        "@chatluna/chat": "2.0.0-alpha.0",
+        "@chatluna/core": "2.0.0-alpha.0",
+        "@chatluna/engine": "2.0.0-alpha.0",
+        "@chatluna/message": "2.0.0-alpha.0",
+        "@chatluna/permission": "2.0.0-alpha.0",
+        "@chatluna/preset": "2.0.0-alpha.0",
+        "@chatluna/prompt": "2.0.0-alpha.0",
+        "@chatluna/schema": "2.0.0-alpha.0",
+        "@chatluna/server": "2.0.0-alpha.0",
+        "@chatluna/storage-files": "2.0.0-alpha.0",
+        "@chatluna/tool": "2.0.0-alpha.0",
+        "@chatluna/transform": "2.0.0-alpha.0",
+        "@chatluna/ui-client": "2.0.0-alpha.0",
+        "@chatluna/ui-kit": "2.0.0-alpha.0",
+        "@chatluna/ui-server": "2.0.0-alpha.0",
+        "@chatluna/ui-storage": "2.0.0-alpha.0",
+        "@chatluna/utils": "2.0.0-alpha.0",
+        "@cordisjs/plugin-database": "4.2.0",
+        "@cordisjs/plugin-http": "npm:^1.5.1",
+        "@cordisjs/plugin-timer": "^1.1.4",
+        "@types/omggif": "^1.0.5",
+        "@types/react": "^19.2.0",
+        "@types/react-dom": "^19.2.0",
+        "chatluna": "2.0.0-alpha.0",
+        "cordis": "4.0.0-rc.12",
+        "lucide-react": "^1.31.0",
+        "react": "^19.2.8",
+        "react-dom": "^19.2.8",
+        "typescript": "*"
+    },
+    "cordis": {
+        "description": {
+            "zh": "自动收集会话中的表情包，按人设识别、内化，并让模型用 <sticker> 发送表情。",
+            "en": "Collects stickers from conversations, catalogs them per persona, and lets the model send them with <sticker>."
+        }
+    }
+}

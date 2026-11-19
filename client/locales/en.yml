@@ -1,0 +1,79 @@
+title: Stickers
+description: Per-persona sticker library, collected and cataloged automatically.
+preset: Preset
+preset.missing: Deleted
+preset.none: No presets
+search: Search titles or descriptions
+clear: Clear
+upload: Upload
+uploaded: '{added} added, {skipped} skipped'
+uploadFailed: Upload failed
+run: Run batch now
+running: Running
+runStarted: Batch started
+runJoined: A batch is already running
+runFailed: Could not start the batch
+downloadAll: Download all
+downloadSelected: Download selected
+downloadFailed: Download failed
+
+status.all: All
+status.collecting: Collecting
+status.pending: Pending
+status.processing: Processing
+status.fit: Fit
+status.unfit: Unfit
+status.failed: Failed
+
+status.hint.collecting: 'Saved, but seen fewer than {threshold} times in this preset''s conversations, so not cataloged yet; it queues itself once it reaches {threshold}, or use Reprocess to queue it now.'
+status.hint.pending: 'Waiting to be cataloged: a full grid runs at once, otherwise at the scheduled batch or Run batch now.'
+status.hint.processing: 'The model is cataloging it.'
+status.hint.fit: 'In the library; the model can send it with <sticker>.'
+status.hint.unfit: 'Cataloged, but judged off-persona, so the model never sees it; you can mark it fit.'
+status.hint.failed: 'Cataloging failed (see Reason); use Reprocess to retry.'
+
+source.collected: Collected
+source.uploaded: Uploaded
+source.copied: Copied
+source.saved: Saved by the model
+
+list.untitled: Not cataloged
+list.progress: 'Seen {count}/{threshold}'
+list.empty: No stickers yet
+list.emptyHint: Stickers seen in conversations appear here automatically, or use Upload.
+list.noMatch: No matching stickers
+list.prev: Previous
+list.next: Next
+list.page: '{from}–{to} of {total}'
+
+selection.count: '{count} selected'
+selection.clear: Clear selection
+selection.all: Select page
+
+copy: Copy to preset
+copy.target: Target preset
+copy.hint: Only the images join the target preset's pending queue; titles, descriptions and verdicts are not copied.
+copy.done: '{queued} queued, {skipped} skipped'
+copy.failed: Copy failed
+requeue: Reprocess
+requeue.done: Queued again
+delete: Delete
+delete.title: Delete stickers
+delete.hint: 'Delete {count} stickers from this preset? Other presets are unaffected.'
+delete.failed: Delete failed
+cancel: Cancel
+confirm: Confirm
+
+detail.title: Sticker
+detail.field.title: Title
+detail.field.description: Description
+detail.field.scenes: Scenes
+detail.field.verdict: Fit
+detail.field.reason: Reason
+detail.field.count: Seen
+detail.field.source: Source
+detail.field.summary: Platform summary
+detail.save: Save
+detail.saved: Saved
+detail.saveFailed: Save failed
+detail.loadFailed: Could not load the image

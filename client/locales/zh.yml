@@ -1,0 +1,79 @@
+title: 表情包
+description: 按人设收集、识别并内化的表情库。
+preset: 预设
+preset.missing: 已删除
+preset.none: 暂无预设
+search: 搜索标题或描述
+clear: 清空
+upload: 上传
+uploaded: '已加入 {added} 张，跳过 {skipped} 张'
+uploadFailed: 上传失败
+run: 立即跑批
+running: 运行中
+runStarted: 已开始跑批
+runJoined: 已有跑批在运行
+runFailed: 跑批启动失败
+downloadAll: 下载全部
+downloadSelected: 下载所选
+downloadFailed: 下载失败
+
+status.all: 全部
+status.collecting: 收集中
+status.pending: 待处理
+status.processing: 处理中
+status.fit: 贴合
+status.unfit: 不贴合
+status.failed: 失败
+
+status.hint.collecting: '图片已保存，但在本预设的会话中出现次数还不到 {threshold} 次，暂不识别；够数后自动进入待处理，也可以点「重新处理」立即排队。'
+status.hint.pending: '排队等待识别：凑满一格立即跑批，否则在定时跑批或点「立即跑批」时处理。'
+status.hint.processing: '模型正在识别。'
+status.hint.fit: '已入库，模型可以用 <sticker> 发送。'
+status.hint.unfit: '已识别，但模型判断不符合人设，不会提供给模型；可手动改为贴合。'
+status.hint.failed: '识别失败（原因见理由），可点「重新处理」重试。'
+
+source.collected: 会话收集
+source.uploaded: 上传
+source.copied: 复制
+source.saved: 模型收藏
+
+list.untitled: 未识别
+list.progress: '出现 {count}/{threshold} 次'
+list.empty: 暂无表情
+list.emptyHint: 会话中出现的表情会自动出现在这里，也可以点击「上传」。
+list.noMatch: 暂无匹配的表情
+list.prev: 上一页
+list.next: 下一页
+list.page: '{from}–{to} / {total}'
+
+selection.count: '已选 {count} 张'
+selection.clear: 取消选择
+selection.all: 全选本页
+
+copy: 复制到预设
+copy.target: 目标预设
+copy.hint: 只把图片放进目标预设的待处理队列，标题、描述和贴合结论不会复制。
+copy.done: '已加入 {queued} 张，跳过 {skipped} 张'
+copy.failed: 复制失败
+requeue: 重新处理
+requeue.done: 已重新排队
+delete: 删除
+delete.title: 删除表情
+delete.hint: '从当前预设删除 {count} 张表情？其他预设不受影响。'
+delete.failed: 删除失败
+cancel: 取消
+confirm: 确定
+
+detail.title: 表情详情
+detail.field.title: 标题
+detail.field.description: 描述
+detail.field.scenes: 适用场景
+detail.field.verdict: 贴合
+detail.field.reason: 理由
+detail.field.count: 出现次数
+detail.field.source: 来源
+detail.field.summary: 平台描述
+detail.save: 保存
+detail.saved: 已保存
+detail.saveFailed: 保存失败
+detail.loadFailed: 图片读取失败
