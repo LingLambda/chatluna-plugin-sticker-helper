@@ -1,6 +1,6 @@
 {
     "name": "chatluna-plugin-sticker-helper",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "自动收集表情包、按人设内化并让模型发表情",
     "author": "LingLambda",
     "type": "module",
@@ -80,6 +80,7 @@
         "@chatluna/transform": "2.0.0-alpha.0",
         "@chatluna/ui-client": "2.0.0-alpha.0",
         "@chatluna/ui-kit": "2.0.0-alpha.0",
+        "@chatluna/ui-schema-registry": "2.0.0-alpha.0",
         "@chatluna/ui-server": "2.0.0-alpha.0",
         "@chatluna/ui-storage": "2.0.0-alpha.0",
         "@chatluna/utils": "2.0.0-alpha.0",

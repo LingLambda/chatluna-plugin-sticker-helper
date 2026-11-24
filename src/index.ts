@@ -15,7 +15,7 @@ export * from './types'
 export const name = 'chatluna-plugin-sticker-helper'
 
 export interface Config {
-  collect: 'sticker' | 'all'
+  autoCollect: boolean
   threshold: number
   gridSize: 9 | 4
   gifPerGrid: number
@@ -28,9 +28,11 @@ export interface Config {
 }
 
 export const Config: Schema<Config> = Schema.object({
-  collect: Schema.union([Schema.const('sticker').description('仅表情'), Schema.const('all').description('所有图片')])
-    .default('sticker')
-    .description('收集范围：只收集平台标记为表情的图片，或收集所有图片。'),
+  autoCollect: Schema.boolean()
+    .default(true)
+    .description(
+      '自动收集总开关。关闭后不再从会话中收集图片，规则中的「收集范围」也不再显示和生效；上传、复制和模型主动收藏不受影响。'
+    ),
   threshold: Schema.natural().min(1).default(2).description('同一张图在某预设的会话中出现多少次后进入待处理队列。'),
   gridSize: Schema.union([Schema.const(9).description('9 张（3×3）'), Schema.const(4).description('4 张（2×2）')])
     .default(9)
@@ -75,7 +77,7 @@ export const inject = ['database', 'model', 'http', 'timer', 'chatluna', 'chat',
 export function apply(ctx: Context, config: Config) {
   const store = new StickerStore(ctx, config)
   const runner = new BatchRunner(ctx, config, store)
-  applyCapture(ctx, config, store, runner)
+  if (config.autoCollect) applyCapture(ctx, config, store, runner)
   applyLibrary(ctx, config, store)
   ctx.inject(['chatluna_webui', 'permissions'], (ctx) => applyWebUI(ctx, config, store, runner))
 
